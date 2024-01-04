@@ -6,8 +6,8 @@
 - release (01/04/24)
 
 # Feature
-- Added **Key System**
-- Added **Key Verification**
-- Remove **Direct Access**
-- Remove **Project Feature**
-- Updated **Website**
+- Added *Key System*
+- Added *Key Verification*
+- Remove *Direct Access*
+- Remove *Project Feature*
+- Updated *Website*
