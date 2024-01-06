@@ -34,20 +34,8 @@
         }
     </style>
 </head>
-<body onload="checkReferrer()">
     <button id="generateButton">Generate</button>
     <script>
-        function checkReferrer() {
-            var referringSite = "?referrer=https://workink.net/1T8Z/lr1n7kmf";
-            var urlParams = new URLSearchParams(window.location.search);
-
-            if (!urlParams.has('referrer') || urlParams.get('referrer') !== referringSite) {
-                window.location.href = "https://aquaalua.github.io/denied";
-            } else {
-                window.location.href = "https://aquaalua.github.io/type.html";
-            }
-        }
-
         function generateApiKey() {
             const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
             let key = '';
@@ -64,5 +52,4 @@
             alert("Key generated successfully!");
         });
     </script>
-</body>
 </html>
