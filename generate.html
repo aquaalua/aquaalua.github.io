@@ -49,7 +49,15 @@
 
         document.getElementById("generateButton").addEventListener("click", function() {
             const generatedKey = generateApiKey();
-            alert("Successfully generated key, but note please do not share your private key or else you get block from our service, the key will expire at 24 hours!\n\nKey : " + generatedKey);
+            var textToCopy = "generatedKey;
+            var tempInput = document.createElement("input");
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 9999e9);
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Successfully generated key, but note please do not share your private key or else you get block from our service, the key will expire at 24 hours!");
         });
     </script>
 </html>
