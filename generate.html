@@ -49,7 +49,7 @@
 
         document.getElementById("generateButton").addEventListener("click", function() {
             const generatedKey = generateApiKey();
-            var textToCopy = "generatedKey";
+            var textToCopy = generatedKey;
             var tempInput = document.createElement("input");
             tempInput.value = textToCopy;
             document.body.appendChild(tempInput);
