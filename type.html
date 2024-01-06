@@ -48,6 +48,7 @@
     <label for="apiKey">Decryption Keys :</label>
     <input type="text" id="apiKey">
     <button id="downloadButton">Verify</button>
+    <button onclick="generateWeb()">Generate</button>
     <script>
         document.getElementById("downloadButton").addEventListener("click", function() {
             const enteredKey = document.getElementById("apiKey").value;
@@ -55,7 +56,7 @@
             if (parts.length === 2) {
                 const expirationTimestamp = parseInt(parts[1]);
                 if (expirationTimestamp > Date.now()) {
-                    window.location.href = "/path/to/your_file.txt";
+                    window.location.href = "none.txt";
                 } else {
                     alert("Invalid decryption key, please try again!");
                 }
@@ -63,6 +64,10 @@
                 alert("Invalid decryption key format, access denied");
             }
         });
+
+        function generateWeb() {
+            window.location.href = "https://work.ink/1T8Z/lr1n7kmf";
+        }
     </script>
 </body>
 </html>
