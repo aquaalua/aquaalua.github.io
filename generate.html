@@ -39,10 +39,12 @@
     <script>
         function checkReferrer() {
             var referringSite = "https://workink.net/1T8Z/lr1n7kmf";
-            if (document.referrer !== referringSite) {
+            var urlParams = new URLSearchParams(window.location.search);
+
+            if (!urlParams.has('referrer') || urlParams.get('referrer') !== referringSite) {
                 window.location.href = "https://aquaa.github.io/denied";
             } else {
-                window.location.href = "https://aquaa.github.io/type.html"
+                window.location.href = "https://aquaa.github.io/type.html";
             }
         }
 
