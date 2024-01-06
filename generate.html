@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ff4444;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff4444;
+            color: #1a1a1a;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+<body onload="checkReferrer()">
+    <button id="generateButton">Generate</button>
+    <script>
+        function checkReferrer() {
+            var referringSite = "https://work.ink/1T8Z/lr1n7kmf";
+            if (document.referrer !== referringSite) {
+                window.location.href = "https://aquaa.github.io/denied";
+            } else {
+                window.location.href = "https://aquaa.github.io/type.html"
+            }
+        }
+
+        function generateApiKey() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let key = '';
+            for (let i = 0; i < 16; i++) {
+                key += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            const expirationTimestamp = Date.now() + (24 * 60 * 60 * 1000);
+            key += '|' + expirationTimestamp;
+            return key;
+        }
+
+        document.getElementById("generateButton").addEventListener("click", function() {
+            const generatedKey = generateApiKey();
+            alert("Key generated successfully!");
+        });
+    </script>
+</body>
+</html>
