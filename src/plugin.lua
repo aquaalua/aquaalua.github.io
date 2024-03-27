@@ -3,7 +3,14 @@
   This used in script to use for
   files, search and others, this is
   open source you can use this.
-  
+
+  Sample usage!
+
+  ```
+  local plugin = load(gg.makeRequest('https://aquaalua.github.io/src/plugin.lua').content)()
+  plugin:notify({text="sample"})
+  ```
+
 ]]--
 
 local plugin = {}
