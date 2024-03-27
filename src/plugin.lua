@@ -17,7 +17,7 @@ function plugin:alert(tab)
 end
 
 function plugin:sleep(tab)
-    gg.sleep(tab.sleep)
+    gg.sleep(tab.time)
 end
 
 function plugin:read(tab)
