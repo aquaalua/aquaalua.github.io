@@ -4,7 +4,7 @@
   files, search and others, this is
   open source you can use this.
   
---]]
+]]--
 
 local plugin = {}
 
